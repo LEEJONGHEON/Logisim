@@ -3,7 +3,8 @@ Logisim 개발툴은 http://www.cburch.com/logisim/ 로 진행하였습니다. <
 
 
 ttt 파일은 MIPS의 방식을 채택한 CPU입니다 해당 CPU는 32bit로진행되며 MIPS명령어를 이용한 원사이클 CPU입니다. <br>
-
+# 주의사항
+one sycle clock cpu는 한사이클에 IR과 데이터 읽기,쓰기를 동시에 수행할수없으므로, Data와 IR 메모리를 분리하여 한번에 실행되게해야한다 <br>
 # CPU회로 설명
 1)IFU : Instruction Fetch Unit <br
 PC(Program Counter)를 이용하여 명령어 메모리에서 명령어를 읽어온다 IR <- Mem[PC] <br>
