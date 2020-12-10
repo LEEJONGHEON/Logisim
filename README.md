@@ -10,23 +10,25 @@ PC(Program Counter)를 이용하여 명령어 메모리에서 명령어를 읽�
 일반적인 경우는 PC는 PC+4으로 변화 ,특수경우 BEQ인경우에는 rt와 rs값이 서로 같을경우 PC+4+SignExt(imm16)으로 변경된다. <br>
 
 <br>
-R타입의 명령어인경우 <br>
+1. R타입의 명령어인경우 <br>
   6bit   5bit 5bit 5bit 5bit    6bit  <br>
 [opcode] [rt] [rs] [rd] [shamt] [funct] <br>
+<br>
 ex) ADD경우 <br>
 IR <- Mem[PC] <br>
 R[rd] <- R[rs] + R[rt] <br>
 PC <- PC + 4 <br>
 <br>
-I타입의 경우 <br>
+2. I타입의 경우 <br>
   6bit    5bit 5bit 16bit <br>
 [opcode] [rt] [rs] [imm16] <br>
+<br>
 ex) lw경우 <br>
 IR <- Mem[PC] <br>
 Addr <- R[rt] + SignExt(imm16) <br>
 R[rs] <- Mem[Addr] <br>
 PC <- PC + 4  <br>
-
+<br>
 ex) beq경우 <br>
 IR <- Mem[PC] <br>
 Cond <- R[rt] + ~R[rs] + 1  : rt - rs <br>
