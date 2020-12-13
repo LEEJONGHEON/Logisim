@@ -3,6 +3,7 @@ Logisim 개발툴은 http://www.cburch.com/logisim/ 로 진행하였습니다. <
 
 
 ttt 파일은 MIPS의 방식을 채택한 CPU입니다 해당 CPU는 32bit로진행되며 MIPS명령어를 이용한 원사이클 CPU입니다. <br>
+kaoshi222파일은 기준 ttt에서 그림 1.png , 2.png 기능을 추가한 CPU입니다. <br>
 # 주의사항
 one sycle clock cpu는 한사이클에 IR과 데이터 읽기,쓰기를 동시에 수행할수없으므로, Data와 IR 메모리를 분리하여 회로를 구성합니다 <br>
 # CPU회로 설명
